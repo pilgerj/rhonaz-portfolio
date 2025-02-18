@@ -1,0 +1,20 @@
+.placar {
+    background-color: black;
+    border: 5px solid #444;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
+  
+  .numero {
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    font-family: "Digital-7", sans-serif;
+    text-align: center;
+    width: 100%;
+  }
+  

@@ -11,6 +11,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* --main-color: #f547fb; */
+  --main-color: #FED766;
+  --second-color: #EC0201;
+  /* --border-glow: #005ccf; */
+  --border-glow: #EC0201;
+  --subBorder-glow: #F4F4F8;
+  --text-glow: #FED766;
+  --subtext-glow: #FED766;
+
+  --indigo: #4A0D67;
+  --purple: #B649E9;
+  --green: #0AFF3F;
+  --blue-black: #101019;
+  --light-grey: #DADAE7;
+  /* --secondary-color: #1a1a1a; Dark gray */
+  width: 100%;
 }
 
 a {
@@ -42,7 +59,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   cursor: pointer;
   transition: border-color 0.25s;
 }

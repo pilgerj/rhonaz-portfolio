@@ -1,0 +1,28 @@
+.footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5rem; 
+    /* background: linear-gradient(45deg, #000, #111); */
+    border-top: 2px solid var(--second-color);
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    color: var(--main-color);
+    opacity: 0.8;
+  }
+  
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    color: var(--main-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
