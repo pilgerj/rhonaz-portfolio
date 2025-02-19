@@ -5,14 +5,18 @@ import SocialEmbeds from './SocialEmbeds';
 import avatar from '../assets/corpo2.png';
 import MoreInfoButton from './MoreInfoButton';
 import Placar from './Placar';
+import CircuitCard from './CircuitCard';
+import desastreRitmoImg from '../assets/music/desastreritmo.jpeg';
+import ritmandoLajeImg from '../assets/music/sethamburguer.png';
+import fikadiImg from '../assets/music/fikadi.jpg';
+import pompoarismoImg from '../assets/music/pompoarismo.jpg';
 
 const MainContent = () => {
 
-  return (
+return (
     <main className="main-content">
       <div className="intro">
         <div>
-          {/* <img src={avatar}></img> */}
           <motion.img
             src={avatar}
             alt={"rhonaz-img"}
@@ -26,7 +30,6 @@ const MainContent = () => {
               duration: 0.2,
               repeat: Infinity,
               ease: "easeOut",
-              
             }}
           />
         </div>
@@ -36,16 +39,45 @@ const MainContent = () => {
           <MoreInfoButton />
         </div>
       </div>
-      <div>
+      <div className="music-player">
+        <div className="intro" style={{ marginBottom: '12px', flexDirection: 'column' }}>
+          <p>100.000+ plays nas plataformas de stream</p>
+          <div className="releases">
+            <CircuitCard 
+              key="1" 
+              title={"DESASTRE RITMO"} 
+              subtitle={"[ ALBUM ]"} 
+              imageUrl={desastreRitmoImg}
+              url={"https://open.spotify.com/intl-pt/album/1izHa5aDBA8rHLoC6UdP2X?si=Skmgjz14QxaDJVmwDRDfgg"}
+            />
+            <CircuitCard 
+              key="2" 
+              title={"RITMANDO NA LAJE"} 
+              subtitle={"[ SET ]"} 
+              imageUrl={ritmandoLajeImg}
+              url={"https://www.youtube.com/watch?v=StRiM_XKpRI&t=1124s"}
+            />
+          </div>
+          <div className="releases">
+            <CircuitCard 
+              key="3" 
+              title={"FIK4DI feat. ZERO"} 
+              subtitle={"[ SINGLE ]"} 
+              imageUrl={fikadiImg}
+              url={"https://open.spotify.com/intl-pt/album/1OeGvIAHdE2f0GhnJCMbKm?si=GiPR9llUQHmkc-vr_kl1rg"}
 
+            />
+            <CircuitCard 
+              key="4" 
+              title={"POMPOARISMO REMIX"} 
+              subtitle={"[ SINGLE ]"} 
+              imageUrl={pompoarismoImg}
+              url={"https://soundcloud.com/rhonaz/mu540-bia-soull-pompoarismo-dj-rhonaz-remix"}
 
-        <div className="music-player">
-        <div className="intro" style={{ marginBottom: '12px' }}>
-          {/* <h2>Considero minhas músicas como Funk Experimental</h2> */}
-          <p>55.000+ plays no Spotify e 42.000+ plays no SoundCloud</p>
+            />
+          </div>
         </div>
-          <SocialEmbeds />
-        </div>
+        <SocialEmbeds />
       </div>
     </main>
   );

@@ -58,10 +58,9 @@
     font-size: 1.2rem;
     color: var(--subBorder-glow);
     text-shadow: 0 0 5px var(--border-glow);
-    @media screen and (max-width: 720px) {
+    /* @media screen and (max-width: 720px) {
         font-size: 1rem;
-
-    }
+    } */
   }
 
   .modal-content a {
