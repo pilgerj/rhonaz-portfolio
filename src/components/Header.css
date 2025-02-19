@@ -8,6 +8,9 @@
   justify-content: space-between;
   padding: 2em;
   align-items: center;
+  @media screen and (max-width: 720px) {
+    padding: 1px !important;
+  }
 }
 
 .logoHeader {
