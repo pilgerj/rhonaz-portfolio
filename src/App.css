@@ -1,11 +1,15 @@
 #root {
-  /* max-width: 1280px; */
+  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  /* width: 100%; Garante que a largura seja 100% por padrão */
+
+  /* Quando for mobile */
   @media screen and (max-width: 720px) {
-    width: 100%;
-  };
-};
+    max-width: 100%; /* Define a largura máxima como 100% */
+  }
+}
+
 
 .logo {
   height: 6em;

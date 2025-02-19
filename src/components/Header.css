@@ -6,10 +6,10 @@
     /* filter: drop-shadow(0 0 21px var(--text-glow)); */
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  /* padding: 2em; */
   align-items: center;
   @media screen and (max-width: 720px) {
-    padding: 1px !important;
+    /* padding: 0px !important; */
   }
 }
 
