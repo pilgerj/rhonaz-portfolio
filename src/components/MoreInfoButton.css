@@ -1,6 +1,8 @@
 /* Container principal */
 .container {
     margin-top: 32px;
+    position: fixed;
+    z-index: 1;
 }
   
   /* Botão de abrir o modal */
@@ -13,6 +15,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-top: 21px;
   }
   
   .open-button:hover {
@@ -31,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   
   /* Caixa do modal */
@@ -42,6 +46,11 @@
     width: 100%;
     text-align: center;
     position: relative;
+    width: 50%;
+    margin: 12px;
+    @media screen and (max-width: 720px) {
+      width: 90%;
+  }
   }
   
   /* Título do modal */

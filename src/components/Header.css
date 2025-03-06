@@ -17,6 +17,11 @@
   width: 100px;
   height: 100px;
   filter: drop-shadow(0 0 60px var(--text-glow));
+  @media screen and (max-width: 720px) {
+    /* padding: 0px !important; */
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .glitch {
@@ -26,6 +31,10 @@
   color: var(--main-color);
   animation: glitch 2.5s infinite;
   text-shadow: 0 0 6px var(--border-glow);
+  @media screen and (max-width: 720px) {
+    font-size: 3rem;
+    /* padding: 0px !important; */
+  }
 }
 
 .glitch::before, .glitch::after {
