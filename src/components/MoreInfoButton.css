@@ -69,7 +69,7 @@
     text-shadow: 0 0 5px var(--border-glow);
     text-align: justify;
     @media screen and (max-width: 720px) {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
   }
 
@@ -77,6 +77,9 @@
     font-size: 1.2rem;
     color: var(--subtext-glow);
     text-shadow: 0 0 5px var(--border-glow);
+    @media screen and (max-width: 720px) {
+      font-size: 0.8rem;
+  }
   }
   
   /* Botão de fechar */

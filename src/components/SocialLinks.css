@@ -1,0 +1,84 @@
+/* Social Links Container Styles */
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    margin-top: 21px;
+  }
+  
+  .social-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Individual Card Styles */
+  .social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white; */
+    border-radius: 0.5rem;
+    /* box-shadow: 0 2px 4px rgba(127, 126, 126, 0.401); */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    width: 30%;
+    min-width: 120px;
+    height: 70px;
+  }
+  
+  .social-card:hover {
+    transform: translateY(2px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Icon Styles */
+  .icon-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin: 0;
+    filter: none !important;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Text Styles */
+  .social-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .social-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .social-card {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .social-card {
+      padding: 1rem;
+    }
+  }

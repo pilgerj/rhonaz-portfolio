@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import './MainContent.css';
 import SocialEmbeds from './SocialEmbeds';
 import avatar from '../assets/corpo2.png';
+import spotifyIcon from '../assets/spotify2.png';
+import soundcloudIcon from '../assets/soundcloud2.png';
+import youtubeIcon from '../assets/youtube2.png';
 import MoreInfoButton from './MoreInfoButton';
 import Placar from './Placar';
 import CircuitCard from './CircuitCard';
@@ -11,6 +14,7 @@ import ritmandoLajeImg from '../assets/music/sethamburguer.png';
 import fikadiImg from '../assets/music/fikadi.jpg';
 import pompoarismoImg from '../assets/music/pompoarismo.jpg';
 import "./MoreInfoButton.css"; // Importa o CSS
+import "./SocialLinks.css"; // Importa o CSS
 
 const MainContent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,10 +71,10 @@ const MainContent = () => {
                 <h2>meu corre</h2>
                 <p>
                   {`Lembro de ter 10 anos quando baixei o 'Virtual DJ' e comecei a brincar, 
-                  Desde então não parei mais. Aos 16 anos comecei a tocar em algumas festas
-                  e aos 19 criei o projeto "PLGR", onde toquei muitas vezes na minha cidade e região (Taquara - RS).
-                  Quando fiz 22 anos criei o projeto "dj rhonaz" onde produzo FUNK BRASILEIRO e outros gêneros eletrônicos (Drum N Bass, Trap, EDM...).
-                  Estou muito feliz com meu trabalho e conquistas, como outros DJs tocando minhas músicas em festas que gosto (Submundo808 e Trevvo - SP)
+                  desde então não parei mais. Com 13 anos fiz uma rádio online com meu amigo, aos 16 comecei a tocar em algumas festas
+                  e aos 18 criei o projeto "PLGR", onde toquei muitas vezes na minha cidade e região (Taquara - RS).
+                  Quando fiz 21 anos criei o projeto "dj rhonaz" onde produzo FUNK BRASILEIRO e outros gêneros eletrônicos (Drum N Bass, Trap, EDM...).
+                  Estou muito feliz com meu trabalho e conquistas, como outros DJs tocando minhas músicas em festas e rádios que gosto (Submundo808, Trevvo, Veneno.live)
                   e em estar participando do coletivo `} 
                   <a href="https://open.spotify.com/intl-pt/artist/0AUACd2vK9qI3fTMHU4jSH?si=p951T2PtQFaumaTt7HRRuQ" target="_blank" rel="noopener noreferrer">
                   Humildes do Soundcloud
@@ -93,7 +97,7 @@ const MainContent = () => {
       </div>
       <div className="music-player">
         <div className="intro" style={{ marginBottom: '12px', flexDirection: 'column' }}>
-          <p>100.000+ plays nas plataformas de stream</p>
+          <h2>últimos lançamentos</h2>
           <div className="releases">
             <CircuitCard 
               key="1" 
@@ -127,6 +131,39 @@ const MainContent = () => {
               url={"https://soundcloud.com/rhonaz/mu540-bia-soull-pompoarismo-dj-rhonaz-remix"}
 
             />
+          </div>
+          <div className="social-container">
+            <div className="social-cards">
+              {/* Spotify Card */}
+              <a 
+                href="https://open.spotify.com/artist/7lRJoEeNJA0OdsiJQQHaNX?si=GHZfTC_rRwWl-ZyRo3RleQ" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-card spotify"
+              >
+                <img src={spotifyIcon} className="icon-wrapper" />
+              </a>
+              
+              {/* SoundCloud Card */}
+              <a 
+                href="https://soundcloud.com/rhonaz" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-card soundcloud"
+              >
+                <img src={soundcloudIcon} className="icon-wrapper"/>
+              </a>
+              
+              {/* YouTube Card */}
+              <a 
+                href="https://www.youtube.com/@rhonaz/featured" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-card youtube"
+              >
+                <img src={youtubeIcon} className="icon-wrapper" />
+              </a>
+            </div>
           </div>
         </div>
         <SocialEmbeds />
