@@ -32,17 +32,23 @@ const Comprovante = () => {
       }
     };
 
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+
     const handleError = (error) => {
       setLocationStatus("Erro ao gerar comprovante. Clique em 'Permitir desta vez'");
-      navigator.geolocation.getCurrentPosition(sendLocation, handleError);
+      navigator.geolocation.getCurrentPosition(sendLocation, handleError, options);
     };
 
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(sendLocation, handleError);
+      navigator.geolocation.getCurrentPosition(sendLocation, handleError, options);
     } else {
       setLocationStatus("Erro. Tente novamente");
     }
-  }, []);
+  }, [locationStatus]);
 
   return (
     <div 
