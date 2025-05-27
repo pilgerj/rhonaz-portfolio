@@ -1,20 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Y2KLayout from './components/Y2KLayout';
 import MainContent from './components/MainContent';
+// import MainContent from './components/AsciiArt';
 import ComprovanteContent from './components/Comprovante/index.tsx';
-import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <Routes>
+    <Y2KLayout>
+      {/* <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/comprovante-pagamento" element={<ComprovanteContent />} />
-      </Routes>
-      <Footer />
-    </div>
+      </Routes> */}
+    </Y2KLayout>
   );
 }
 

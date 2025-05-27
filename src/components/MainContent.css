@@ -2,8 +2,9 @@
 
 body {
   /* background: var(--main-bg); */
-  font-family: 'Orbitron', sans-serif;
+  /* font-family: 'Orbitron', sans-serif; */
   color: var(--main-color);
+  font-family: 'VT323', monospace;
 }
 
 .main-content {
@@ -21,7 +22,7 @@ body {
   gap: 1.5rem;
   padding: 20px;
   border: 2px solid var(--border-glow);
-  box-shadow: 0px 0px 15px var(--border-glow);
+  /* box-shadow: 0px 0px 15px var(--border-glow); */
   background: var(--blue-black);
   backdrop-filter: blur(5px);
   border-radius: 12px;
@@ -58,7 +59,7 @@ body {
 .music-player {
   padding: 15px;
   border: 2px solid var(--text-glow);
-  box-shadow: 0px 0px 15px var(--text-glow);
+  /* box-shadow: 0px 0px 15px var(--text-glow); */
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   border-radius: 12px;
