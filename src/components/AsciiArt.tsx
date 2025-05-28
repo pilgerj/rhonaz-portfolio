@@ -93,7 +93,7 @@ const AsciiArt = () => {
   }, []);
 
   return (
-    <div style={{ width: '100%', position: 'absolute', top: 60, left: 0, justifyContent: 'center', alignItems: 'center' }}>
+    <div style={{ width: '100%', position: 'absolute', top: 30, left: 0, justifyContent: 'center', alignItems: 'center' }}>
       <pre style={{ fontFamily: 'monospace', lineHeight: '90%', fontSize: '12px', color: 'var(--main-color)' }}>{art}</pre>
     </div>
   );

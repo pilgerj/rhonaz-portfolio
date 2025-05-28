@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SlotMachine from './SlotMachine';
 import AsciiArt from './AsciiArt';
+import MusicReleases from './MusicReleases';
+import About from './About';
 import '../styles/Y2KLayout.css';
 import { Home } from 'lucide-react';
-
+import Footer from './Footer';
 interface Y2KLayoutProps {
   children?: React.ReactNode;
 }
@@ -33,7 +35,7 @@ const Y2KLayout: React.FC<Y2KLayoutProps> = ({ children }) => {
       <div className="y2k-title-bar">
         <div className="y2k-title-bar-left">
           {/* <div className="y2k-icon">📀</div> */}
-          <div className="y2k-title">rhonaz-v0</div>
+          <div className="y2k-title">ritmotorto_v0.sh</div>
         </div>
         <div className="y2k-title-bar-right">
           <button className="y2k-window-button minimize">x</button>
@@ -52,42 +54,14 @@ const Y2KLayout: React.FC<Y2KLayoutProps> = ({ children }) => {
       <div className="y2k-main">
         <div className="y2k-screen">
           <AsciiArt />
+          <Footer />
           {selectedMenu === 'A' && (
             <div className="y2k-content-area-">
             </div>
           )}
-          {selectedMenu === 'B' && (
-            <div className="y2k-content-area-sobre">  
-              <>
-              <p>                       rhonaz.exe                      </p>
-              <p>----------------------------------------------------</p>
-              <p>                                                          </p>
-              <p>  audio malware                                        </p>
-              <p>  origem Brasileira                                    </p>
-              <p>  funk & musicas eletricas                             </p>
-              <p>                                                       </p>
-              <p>----------------------------------------------------</p>
-              <p>Aos 10 anos baixei o 'Virtual DJ',desde então não parei mais. Com 13 fiz uma rádio online com meu amigo, aos 16 comecei a tocar em algumas festas</p>
-              <p>e aos 18 criei o projeto "PLGR", Aos 21 anos criei o "dj rhonaz" onde produzo FUNK BRASILEIRO e outros gêneros (Drum N Bass, Trap, EDM...).</p>
-              <p>Estou muito feliz com meu trabalho e conquistas, como outros DJs tocando minhas músicas em festas e rádios que gosto (Submundo808, Trevvo, Veneno.live)</p>
-              </>
-            </div>
-          )}
+          {selectedMenu === 'B' && <About />}
           {selectedMenu === 'C' && (
-            <div className="y2k-content-area-musicas">
-              <p>                    lancamentos                    </p>
-              <p>------------------------------------------------------</p>
-              <p>  DROP                TIPO           ANO       LINK   </p>
-              <p>------------------------------------------------------</p>
-              <p>  KERA ft. Artigo016    single         2025      <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/artigo016/rhonaz-kera?in=rhonaz/sets/kera-artigo016-rhonaz"> 📀 </a>     </p>
-              <p>  KIT KATRINA           single         2025      <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/rhonaz/kit-katrina-dj-rhonaz"> 📀 </a>     </p>
-              <p>  Desastre Ritmo        album          2024      <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/track/..."> 📀 </a>     </p>
-              <p>  Ritmando Laje         set            2024      <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/track/..."> 📀 </a>     </p>
-              <p>  Fikadi ft. Zero       single         2024      <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/track/..."> 📀 </a>     </p>
-              <p>  Pompoarismo           remix          2025      <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/track/..."> 📀 </a>     </p>
-              <p>                                                       </p>
-              <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-            </div>
+            <MusicReleases />
           )}
           {selectedMenu === 'D' && <></>}
         </div>

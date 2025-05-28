@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2025 dj rhonaz - xorna bass . All rights reserved.</p>
+      <p>&copy; 2025 dj rhonaz - funk e pirataria</p>
       <div className="social-links">
         <a href="https://instagram.com/rhonaz.pilger" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://wa.me/5551995022584?text=oi%20dj%20rhonaz" target="_blank" rel="noopener noreferrer">WhatsApp</a>

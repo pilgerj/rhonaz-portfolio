@@ -2,6 +2,9 @@
     text-align: center;
     padding: 1rem;
     margin-top: 5rem; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     /* background: linear-gradient(45deg, #000, #111); */
     border-top: 2px solid var(--second-color);
     overflow: hidden;
@@ -18,18 +21,18 @@
   
   .social-links {
     margin-top: 1rem;
-    @media screen and (max-width: 720px) {
+    /* @media screen and (max-width: 720px) {
       padding: 0   !important;
       display: flex;
       flex-direction: column;
-    }
+    } */
   }
   
   .social-links a {
     color: var(--main-color);
     text-decoration: none;
     margin: 0 1rem;
-    font-size: 1.2rem;
+    font-size:12px;
     margin-bottom: 4px;
   }
   
