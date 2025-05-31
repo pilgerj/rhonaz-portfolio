@@ -2,11 +2,9 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  /* width: 100%; Garante que a largura seja 100% por padrão */
-
-  /* Quando for mobile */
-  @media screen and (max-width: 720px) {
-    max-width: 100%; /* Define a largura máxima como 100% */
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin: 0 4px;
   }
 }
 
@@ -47,17 +45,7 @@
   color: #888;
 }
 
-/* .iframe-container {
-  display: flex;
-  flex-direction: row;
-
-  @media screen and (max-width: 720px) {
-    flex-direction: column;
-  }
-} */
-
 body {
-  /* background-color: #000; */
   color: rgb(166, 22, 255);
   font-family: 'Courier New', Courier, monospace;
   margin: 0;

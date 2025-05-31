@@ -9,7 +9,7 @@
     border-top: 2px solid var(--second-color);
     overflow: hidden;
     @media screen and (max-width: 720px) {
-      padding: 0   !important;
+      padding: 0 !important;
     }
   }
   
@@ -32,7 +32,7 @@
     color: var(--main-color);
     text-decoration: none;
     margin: 0 1rem;
-    font-size:12px;
+    font-size: 12px;
     margin-bottom: 4px;
   }
   

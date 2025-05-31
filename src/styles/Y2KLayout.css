@@ -8,6 +8,9 @@
   font-size: 1em;
   font-family: 'VT323', monospace;
   background: var(--neon-dark) !important;
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 }
 
 
@@ -21,6 +24,9 @@
   letter-spacing: 2px;
   animation: glitch 1.5s infinite;
   margin-bottom: 10px;
+  @media (max-width: 720px) {
+    font-size: 1em;
+  }
 }
 
 .y2k-title-bar {
@@ -104,6 +110,7 @@
   position: relative;
   background: #000000;
   overflow: hidden;
+  width: 100%;
 }
 
 .y2k-content-area {
@@ -125,6 +132,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  line-height: 1.2;
   flex-direction: column;
   text-align: left;
   background-color: #00000079;
@@ -134,12 +142,12 @@
 }
 
 .y2k-content-area-musicas {
-  padding: 10px;
+  /* padding: 10px; */
   top: 0;
   color: #ded9d9;
   display: flex;
   background-color: #00000079;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   text-align: left;
@@ -147,10 +155,35 @@
   /* text-overflow: ellipsis; */
   /* font-family: 'VT323', monospace; */
   /* font-size: 14px; */
-  line-height: 1.4;
+  /* line-height: 1.4; */
   white-space: pre;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.terminal-style {
+  margin: 0;
+  white-space: pre;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 14px;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.terminal-style p {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .terminal-style {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .terminal-style {
+    font-size: 11px;
+  }
 }
 
 .y2k-content-area-musicas p {

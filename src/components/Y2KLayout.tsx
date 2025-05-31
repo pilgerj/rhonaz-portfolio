@@ -4,8 +4,9 @@ import SlotMachine from './SlotMachine';
 import AsciiArt from './AsciiArt';
 import MusicReleases from './MusicReleases';
 import About from './About';
+import Home from './Home';
 import '../styles/Y2KLayout.css';
-import { Home } from 'lucide-react';
+import { Home as HomeIcon } from 'lucide-react';
 import Footer from './Footer';
 interface Y2KLayoutProps {
   children?: React.ReactNode;
@@ -56,8 +57,7 @@ const Y2KLayout: React.FC<Y2KLayoutProps> = ({ children }) => {
           <AsciiArt />
           <Footer />
           {selectedMenu === 'A' && (
-            <div className="y2k-content-area-">
-            </div>
+            <Home />
           )}
           {selectedMenu === 'B' && <About />}
           {selectedMenu === 'C' && (
@@ -69,7 +69,7 @@ const Y2KLayout: React.FC<Y2KLayoutProps> = ({ children }) => {
 
       <div className="y2k-status-bar">
         <div className="y2k-status-left">999 - fe' pra tudo  </div>
-        <div className="y2k-status-right">© que voce venca em 2025  </div>
+        <div className="y2k-status-right">© que voce venca todo dia  </div>
       </div>
     </div>
   );

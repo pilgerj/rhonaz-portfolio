@@ -10,6 +10,13 @@ interface MusicRelease {
 const MusicReleases: React.FC = () => {
   const releases: MusicRelease[] = [
     {
+      title: 'PANIN ft. ' + 
+             'Dj Theuzz',
+      type: 'single',
+      year: 2025,
+      link: 'https://soundcloud.com/rhonaz/panin'
+    },
+    {
       title: 'DICOPANA ft. ' + 
              'LOFIHOUSEBOY',
       type: 'single',
@@ -56,18 +63,20 @@ const MusicReleases: React.FC = () => {
 
   return (
     <div className="y2k-content-area-musicas">
-      <p>drops                    </p>
-      <p>-----------------------------------------------------------------------</p>
-      <p>  NOME                          TIPO            ANO       LINK   </p>
-      <p>-----------------------------------------------------------------------</p>
-      {releases.map((release, index) => (
-        <p key={index}>
-          {`  ${release.title.padEnd(29)} ${release.type.padEnd(15)} ${release.year}      `}
-          <a target="_blank" rel="noopener noreferrer" href={release.link}> 📀 </a>
-        </p>
-      ))}
-      <p>                                                       </p>
-      <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+      <pre className="terminal-style">
+        <p>drops</p>
+        <p>-----------------------------------------------------------------------</p>
+        <p>  NOME                       TIPO            ANO       LINK   </p>
+        <p>-----------------------------------------------------------------------</p>
+        {releases.map((release, index) => (
+          <p key={index}>
+            {`  ${release.title.padEnd(26)} ${release.type.padEnd(15)} ${release.year}      `}
+            <a target="_blank" rel="noopener noreferrer" href={release.link}> 📀 </a>
+          </p>
+        ))}
+        <p>                                                       </p>
+        <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+      </pre>
     </div>
   );
 };
