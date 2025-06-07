@@ -5,7 +5,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* background: linear-gradient(45deg, #000, #111); */
     border-top: 2px solid var(--second-color);
     overflow: hidden;
     @media screen and (max-width: 720px) {
@@ -21,11 +20,6 @@
   
   .social-links {
     margin-top: 1rem;
-    /* @media screen and (max-width: 720px) {
-      padding: 0   !important;
-      display: flex;
-      flex-direction: column;
-    } */
   }
   
   .social-links a {
@@ -35,6 +29,13 @@
     font-size: 12px;
     margin-bottom: 4px;
   }
+
+  @media (max-width: 768px) {
+    .social-links a {
+      font-size: 12px;
+      margin: 0 10px;
+    }
+  } 
   
   .social-links a:hover {
     text-decoration: underline;

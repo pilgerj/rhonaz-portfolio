@@ -8,6 +8,7 @@ import Home from './Home';
 import '../styles/Y2KLayout.css';
 import { Home as HomeIcon } from 'lucide-react';
 import Footer from './Footer';
+import Contact from './Contact';
 interface Y2KLayoutProps {
   children?: React.ReactNode;
 }
@@ -63,7 +64,7 @@ const Y2KLayout: React.FC<Y2KLayoutProps> = ({ children }) => {
           {selectedMenu === 'C' && (
             <MusicReleases />
           )}
-          {selectedMenu === 'D' && <></>}
+          {selectedMenu === 'D' && <Contact />}
         </div>
       </div>
 
