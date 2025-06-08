@@ -193,7 +193,7 @@
 body {
   margin: 0;
   display: flex;
-  top: 20px;
+  top: 50px;
   min-height: 100vh;
   font-family: 'VT323', monospace;
   background-color: var(--neon-dark);
