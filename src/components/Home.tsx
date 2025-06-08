@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Home as HomeIcon } from 'lucide-react';
 import '../styles/Home.css';
-
+import peido from '../assets/peido.wav';
+import brasil from '../assets/brasil.wav';
 const Home: React.FC = () => {
   const [loadingBar, setLoadingBar] = useState('');
   const [position, setPosition] = useState({ top: '20%', left: '20%' });
@@ -40,11 +41,18 @@ const Home: React.FC = () => {
     setPosition(randomPosition);
   };
 
+  const handleClick = () => {
+    new Audio(peido).play();
+    new Audio(brasil).play();
+    window.open('https://www.pudim.com.br/', '_blank');
+    // TOMA PEIDO E TRACK DE GRAÇA
+    window.open('https://drive.google.com/drive/folders/1WSNwk4ZwBWh8qoydDbW1TeaEhccSiqim?usp=drive_link', '_blank');
+  };
+
   return (
-    <div className="home-container">
+    <div className="home-container"  onClick={handleClick}
+    >
       <div className="home-header">
-        {/* <HomeIcon size={24} /> */}
-        {/* <h1>Welcome to Ritmo Torto</h1> */}
         <div 
           className="loading-animation"
           style={{
@@ -55,32 +63,11 @@ const Home: React.FC = () => {
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={handleMouseEnter}
+          onClick={handleClick}
         >
           {loadingBar}
         </div>
       </div>
-      
-{/*       
-      <div className="home-content">
-        <div className="home-section">
-          <h2>🎵 Latest Updates</h2>
-          <p>Check out my latest music releases and upcoming shows!</p>
-        </div>
-
-        <div className="home-section">
-          <h2>🎸 About Me</h2>
-          <p>Musician, producer, and digital artist exploring the intersection of music and technology.</p>
-        </div>
-
-        <div className="home-section">
-          <h2>📱 Connect</h2>
-          <div className="social-links">
-            <a href="#" className="social-link">Instagram</a>
-            <a href="#" className="social-link">SoundCloud</a>
-            <a href="#" className="social-link">YouTube</a>
-           </div>
-         </div> 
-       </div>*/}
     </div>
   );
 };

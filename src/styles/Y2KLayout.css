@@ -132,17 +132,14 @@
   width: 100%;
   height: 100%;
   display: flex;
-  line-height: 1.2;
   flex-direction: column;
   text-align: left;
   background-color: #00000079;
   overflow-x: hidden;
   overflow-y: hidden;
-  /* align-items: center; */
 }
 
 .y2k-content-area-musicas {
-  /* padding: 10px; */
   top: 0;
   color: #ded9d9;
   display: flex;
@@ -152,10 +149,6 @@
   height: 100%;
   text-align: left;
   flex-direction: column;
-  /* text-overflow: ellipsis; */
-  /* font-family: 'VT323', monospace; */
-  /* font-size: 14px; */
-  /* line-height: 1.4; */
   white-space: pre;
   overflow: overlay;
 }
@@ -273,4 +266,142 @@
 
 .y2k-status-right {
   color: #808080;
+}
+
+.click-counter-window {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  height: 200px;
+  z-index: 1000;
+}
+
+/* Y2K Click Counter Styles */
+.click-counter-window {
+  max-width: 150px;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.y2k-title-bar {
+  background: linear-gradient(90deg, #000080, #0000ff);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+}
+
+.y2k-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.y2k-button {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.y2k-button.close { background: #ff0000; }
+.y2k-button.minimize { background: #ffff00; }
+.y2k-button.maximize { background: #00ff00; }
+
+.y2k-ad-container {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff69b4, #87ceeb);
+  position: relative;
+  overflow: hidden;
+}
+
+.y2k-marquee {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.star-container {
+  margin: 20px 0;
+}
+
+.y2k-star-button {
+  font-size: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  filter: drop-shadow(0 0 10px #ff00ff);
+}
+
+.y2k-star-button:hover {
+  transform: scale(1.2);
+}
+
+.y2k-star-button.animate {
+  animation: starPulse 0.5s ease-in-out;
+}
+
+@keyframes starPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+.y2k-counter {
+  /* background: #000; */
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  margin: 20px 0;
+}
+
+.y2k-counter-label {
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #f4f4f4;
+}
+
+.y2k-counter-value {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.y2k-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.y2k-sparkle {
+  position: absolute;
+  animation: sparkle 2s infinite;
+  font-size: 1.5em;
+}
+
+.y2k-sparkle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.y2k-sparkle:nth-child(2) { top: 20%; right: 20%; animation-delay: 0.5s; }
+.y2k-sparkle:nth-child(3) { bottom: 15%; left: 30%; animation-delay: 1s; }
+
+@keyframes sparkle {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
 } 

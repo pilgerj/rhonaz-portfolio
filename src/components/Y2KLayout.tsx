@@ -9,6 +9,8 @@ import '../styles/Y2KLayout.css';
 import { Home as HomeIcon } from 'lucide-react';
 import Footer from './Footer';
 import Contact from './Contact';
+import ClickCounter from './ClickCounter';
+
 interface Y2KLayoutProps {
   children?: React.ReactNode;
 }
@@ -69,9 +71,10 @@ const Y2KLayout: React.FC<Y2KLayoutProps> = ({ children }) => {
       </div>
 
       <div className="y2k-status-bar">
-        <div className="y2k-status-left">999 - fe' pra tudo  </div>
-        <div className="y2k-status-right">© que voce venca todo dia  </div>
+        <div className="y2k-status-left">fe' pra tudo  </div>
+        <div className="y2k-status-right">© que voce venca todos os dias  </div>
       </div>
+      <ClickCounter />
     </div>
   );
 };
