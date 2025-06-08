@@ -193,8 +193,7 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  /* min-width: 320px; */
+  top: 20px;
   min-height: 100vh;
   font-family: 'VT323', monospace;
   background-color: var(--neon-dark);
